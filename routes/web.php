@@ -17,18 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/',function(){
-// 	return view('index.blade.php');
-// };
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::resource('principal','principal@principalController');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
